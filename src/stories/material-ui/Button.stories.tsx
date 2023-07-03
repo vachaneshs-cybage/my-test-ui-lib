@@ -1,30 +1,32 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { Button } from '../../components'
-import React from 'react'
+import { Meta, StoryObj } from '@storybook/react'
+import { Button } from '../../components/Button'
 
-type Shape = typeof Button
-
-export default {
+const meta: Meta<typeof Button> = {
   title: 'Material/Button',
   component: Button,
-} as ComponentMeta<Shape>
-
-export const Default: ComponentStory<Shape> = (args) => <Button {...args} />
-
-Default.args = {
-  children: 'hello'
-}
-
-export const Primary = Default.bind({});
-Primary.args = {
-  ...Default.args,
-  variant: 'contained',
-  color: 'primary'
 };
 
-export const Secondary = Default.bind({});
-Secondary.args = {
-  children: 'Secondary',
-  variant: 'contained',
-  color: 'secondary'
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+export const Default: Story = {
+  args: {
+    label: 'Button',
+  }
+};
+
+export const Primary: Story = {
+  args: {
+    ...Default.args,
+    variant: 'contained',
+    color: 'primary'
+  }
+};
+
+export const Secondary: Story = {
+  args: {
+    label: 'Button',
+    variant: 'contained',
+    color: 'secondary'
+  }
 };

@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button as BIButton } from '@mui/material'
+import { Button as RawButton, ButtonProps as RawButtonProps } from '@mui/material'
 
-const Button = (props:any) => {
-  return (
-    <BIButton {...props}>{props.children}</BIButton>
-  )
+export type ButtonProps = RawButtonProps & {
+  label: string
 }
 
-export default Button
+export const Button = ({ label, ...props }: ButtonProps) => {
+  return <RawButton {...props}>{label}</RawButton>
+}
