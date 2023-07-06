@@ -1,0 +1,91 @@
+.timeContainer{
+  display: none;
+}
+.inputDate.form-control{
+  border: 1px #a2a2a2 solid;
+  width: 100%;
+}
+.multipleContentOnLine.leftChevron,
+.multipleContentOnLine.rightChevron{
+  display: none;
+}
+
+.multipleContentOnLine,
+.multipleContentOnLine,
+#YearSelector_start,
+#YearSelector_end,
+#MonthSelector_start,
+#MonthSelector_end{
+  width: 100%;
+}
+
+.monthYearContainer{
+  margin: 0px;
+  margin-bottom: 8px;
+}
+
+.inputDate.form-control, #MonthSelector_start,
+#MonthSelector_end, #YearSelector_start,
+#YearSelector_end{
+  border: 1px #c1c1c1 solid;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 1px 0px #888888;
+  padding: 16px 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+.fromDateHourContainer{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-width: 0px 0px 2px 0px;
+  border-color: #d9d9d9;
+  border-radius: 0px;
+}
+#MonthSelector_start,
+#MonthSelector_end,
+#YearSelector_start,
+#YearSelector_end{
+  padding: 6px 10px;
+}
+
+.calendarGrid .calendarCell {
+  font-weight: bold;
+  font-size: 14px;
+}
+.calendarGrid div{
+  font-weight: bold;
+  font-size: 14px;
+}
+.activeNotifier{
+  display: none;
+}
+.buttonContainer .buttonSeperator{
+  margin: 0px 5px;
+}
+.buttonContainer .applyButton {
+  order: 2;
+  color: #FFFFFF;
+  background-color: #00749e !important;
+  text-transform: uppercase;
+  border: 1px solid #00749e;
+}
+.buttonContainer .cancelButton {
+  order: 1;
+  color: #00749e;
+  background-color: #FFFFFF;
+  text-transform: uppercase;
+  border: 1px solid #00749e;
+}
+.rangecontainer{
+  width: 175px;
+}
+.MuiInputBase-inputAdornedEnd{
+  letter-spacing: initial;
+}
+.MuiInputAdornment-root{
+  margin-left: 0px
+}
+.MuiInputAdornment-root .MuiButtonBase-root{
+  padding: 8px 0px;
+}

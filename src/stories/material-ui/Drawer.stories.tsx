@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Link } from '../../components/Link'
+import { Drawer } from '../../components/Drawer'
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 
-const meta: Meta<typeof Link> = {
-  title: 'Material/Link',
-  component: Link,
+const meta: Meta<typeof Drawer> = {
+  title: 'RTBI-Component/Drawer',
+  component: Drawer,
   argTypes: {
     color: {
       control: 'color',
@@ -27,11 +27,8 @@ const meta: Meta<typeof Link> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Link>;
+type Story = StoryObj<typeof Drawer>;
 
 export const Default: Story = {
-  args: {
-    children: 'hello',
-    color: '#ffffff'
-  }
+  args: {}
 };

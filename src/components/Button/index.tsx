@@ -2,9 +2,9 @@ import React from 'react'
 import { Button as RawButton, ButtonProps as RawButtonProps } from '@mui/material'
 
 export type ButtonProps = RawButtonProps & {
-  label: string
+  label?: string
 }
 
-export const Button = ({ label, ...props }: ButtonProps) => {
+export const Button = ({ label = '', ...props }: ButtonProps) => {
   return <RawButton {...props}>{label}</RawButton>
 }

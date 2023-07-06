@@ -43,17 +43,14 @@ export const ChartCardAction = ({
   switchView = () => { },
   exportData = () => { },
   showTable = false,
-  viz = {},
   hideExpand = false,
   hideToggelView = false,
   id,
   hideExcelExport = false,
   hideCSVExport = false,
-  ChartCardAction = false,
   isScheduleReport = false,
   scheduleFlag = false,
-  fullpageLink,
-  ...props }: ChartCardActionProps) => {
+  fullpageLink }: ChartCardActionProps) => {
     const [link, setLink] = useState(fullpageLink)
 
     const onClick = (e: any) => {
