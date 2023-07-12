@@ -6,7 +6,7 @@ import { TextField } from "../TextField";
 
 export type Props = {
   login: Function,
-  message: String,
+  message: string,
   setMessage: Function,
   logo: ReactNode | any
 }
@@ -49,7 +49,7 @@ export const LoginForm = ({ login, message, setMessage, logo = 'Logo' }: Props) 
   return (
     <>
       <Box component="form" onSubmit={handleSubmit} sx={{ position: 'absolute', top: '30%' }}>
-        <Box sx={{ textAlign: 'center' }}>
+        <Box sx={{ textAlign: 'center' }} data-testid="app-logo">
           {logo}
         </Box>
         {message && <Box>

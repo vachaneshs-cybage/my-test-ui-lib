@@ -5,7 +5,7 @@ import React from "react";
 
 export type LinkProps = RawLinkProps & {
   link: any,
-  pathname: String
+  pathname: string
 };
 
 const MUILink = styled(Link)({

@@ -6,7 +6,7 @@ import {
 } from '@mui/material';
 import React from 'react';
 export type CircularProgressProps = RawCircularProgressProps & {
-  hide: Boolean
+  hide: boolean
 }
 
 const WrapperBox = styled(Box)({

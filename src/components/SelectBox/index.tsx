@@ -7,11 +7,11 @@ import {
 } from '@mui/material'
 import React from 'react'
 export type NativeSelectProps = RawNativeSelectProps & {
-  label: String
+  label: string
   options: Object[]
-  selectedAttr: String
+  selectedAttr: any
   setSelectedAttr: Function
-  selectedValue: String
+  selectedValue: string
 }
 
 const UINativeSelect = styled(NativeSelect)({

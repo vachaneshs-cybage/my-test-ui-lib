@@ -12,7 +12,7 @@ import {OptionMenuItem} from '../OptionMenuItem'
 import React from 'react'
 
 export type SelectProps = RawSelectProps & {
-  label?: String
+  label?: string
   options: any
   onSelectChnage?: any
   currentPage?: any

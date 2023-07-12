@@ -21,7 +21,7 @@ import './index.css'
 import {OptionMenuItem} from '../OptionMenuItem'
 
 export type SelectProps = RawSelectProps & {
-  label: String
+  label: string
   options: Object[]
   selectedValue: Object[]
   setSelectedAttr: Function

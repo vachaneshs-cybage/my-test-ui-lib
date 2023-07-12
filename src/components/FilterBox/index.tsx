@@ -16,7 +16,7 @@ import React, {ReactNode, useEffect, useState, useCallback, FormEventHandler} fr
 import {Link} from 'react-router-dom'
 
 export type BoxProps = RawBoxProps & {
-  filterTitle?: String
+  filterTitle?: string
   children: ReactNode
   currentPage?: any
   role?: string

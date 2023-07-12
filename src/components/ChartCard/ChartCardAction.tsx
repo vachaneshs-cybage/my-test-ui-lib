@@ -19,16 +19,16 @@ import React from 'react';
 
 export type ChartCardActionProps = {
     switchView: Function,
-    showTable: Boolean,
+    showTable: boolean,
     exportData: Function,
     viz?: any,
-    hideExpand?: Boolean,
-    hideToggelView?: Boolean,
-    id?: String,
-    hideExcelExport?: Boolean,
-    hideCSVExport?: Boolean,
-    ChartCardAction?: Boolean,
-    isScheduleReport?: Boolean,
+    hideExpand?: boolean,
+    hideToggelView?: boolean,
+    id?: string,
+    hideExcelExport?: boolean,
+    hideCSVExport?: boolean,
+    ChartCardAction?: boolean,
+    isScheduleReport?: boolean,
     scheduleFlag?: any,
     fullpageLink?: string
 }
@@ -97,12 +97,12 @@ export const ChartCardAction = ({
                 <Tooltip title="Table View"><Switch defaultChecked={scheduleFlag}/></Tooltip>
             </Box>} */}
             {!hideToggelView && <Box component="span">
-                <MUIIconButton aria-label="chart-view-toggel" onClick={toggelView} id={`${id}-toggelview`} data-testid={`${id}-toggelview`}>
+                <MUIIconButton aria-label="chart-view-toggel" data-testid="chart-action-view-toggel" onClick={toggelView} id={`${id}-toggelview`}>
                     {showTable ? <Tooltip title="Table View"><ListIcon /></Tooltip> : <Tooltip title="Chart View"><ShowChartIcon /></Tooltip>}
                 </MUIIconButton>
             </Box>}
             {!hideExpand && <Box component="span">
-                <MUIIconButton aria-label="fullscreen-action" onClick={openFullPageView} id={`${id}-screenview`} data-testid={`${id}-screenview`}>
+                <MUIIconButton aria-label="fullscreen-action" data-testid="chart-action-view-fullscreen" onClick={openFullPageView} id={`${id}-screenview`}>
                     <Tooltip title="Full screen"><OpenInNewIcon /></Tooltip>
                 </MUIIconButton>
             </Box>}
@@ -110,7 +110,7 @@ export const ChartCardAction = ({
 
             <Box component="span">
                 <Menu menuButton={
-                    <MUIIconButton aria-label="chart-action-options" id={`${id}-more`} data-testid={`${id}-more`}>
+                    <MUIIconButton aria-label="chart-action-options" id={`${id}-more`}  data-testid="chart-action-view-export-options">
                         <Tooltip title="More"><MoreVertIcon /></Tooltip>
                     </MUIIconButton>
                 }>

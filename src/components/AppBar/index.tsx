@@ -9,7 +9,7 @@ import React from 'react';
 import { ReactNode, useState } from 'react';
 
 export type AppBarProps = RawAppBarProps & {
-  logoText?: String,
+  logoText?: string,
   user?: any,
   toggelSidebar?: Function,
   redirectLogin: HTMLAnchorElement | any,

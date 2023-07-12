@@ -4,7 +4,7 @@ import {
 import React, { useState } from "react";
 
 export type SliderProps = RawSliderProps & {
-  label: String,
+  label: string,
   selectedAttr: Object,
   setSelectedAttr: Function,
   selectedValue: any

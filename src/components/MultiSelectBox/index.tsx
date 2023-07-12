@@ -14,7 +14,7 @@ import {Link} from '../Link'
 import {OptionMenuItem} from '../OptionMenuItem'
 
 export type SelectProps = RawSelectProps & {
-  label: String
+  label: string
   options: Object[]
   selectedValue: Object[]
   setSelectedAttr: Function
