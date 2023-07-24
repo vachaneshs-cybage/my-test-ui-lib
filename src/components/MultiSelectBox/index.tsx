@@ -114,6 +114,19 @@ export const MultiSelectBox = ({
     })
     setMultiSelectedValues(flag === 'all' ? options : [])
   }
+
+  const onClear = (event:any) => {
+    const {
+      target: {
+        name
+      },
+    } = event
+    setSelectedAttr({
+      ...selectedAttr,
+      [name]: [],
+    })
+    setMultiSelectedValues([])
+  }
   
   return (
     <Box>
@@ -167,6 +180,7 @@ export const MultiSelectBox = ({
                   variant='body2'
                   data-testid="select-all-option"
                   data-flag='all'
+                  name={id}
                   underline='none'
                   onClick={onClick}
                 >
@@ -180,7 +194,8 @@ export const MultiSelectBox = ({
                   underline='none'
                   data-testid="clear-all-option"
                   data-flag='clear'
-                  onClick={onClick}
+                  name={id}
+                  onClick={onClear}
                 >
                   Clear All
                 </Link>

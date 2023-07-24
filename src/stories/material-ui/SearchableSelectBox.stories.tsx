@@ -11,6 +11,7 @@ type Story = StoryObj<typeof SearchableSelectBox>;
 
 export const Default: Story = {
   args: {
+    id: 'demo-name',
     selectedValue: ["Option1100", "Option1200"],
     label: 'Select',
     options: [

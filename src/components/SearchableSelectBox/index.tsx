@@ -129,6 +129,19 @@ export const SearchableSelectBox = ({
     setMultiSelectedValues(flag === 'all' ? options : [])
   }
 
+  const onClear = (event:any) => {
+    const {
+      target: {
+        name
+      },
+    } = event
+    setSelectedAttr({
+      ...selectedAttr,
+      [name]: [],
+    })
+    setMultiSelectedValues([])
+  }
+
   const clearSearchText = () => {
     setSearchText('')
     setOptionsCount(0)
@@ -187,6 +200,7 @@ export const SearchableSelectBox = ({
                   variant='body2'
                   data-testid="select-all-option"
                   data-flag='all'
+                  name={id}
                   underline='none'
                   onClick={onClick}
                 >
@@ -198,9 +212,10 @@ export const SearchableSelectBox = ({
                   sx={{cursor: 'pointer'}}
                   variant='body2'
                   underline='none'
+                  name={id}
                   data-testid="clear-all-option"
                   data-flag='clear'
-                  onClick={onClick}
+                  onClick={onClear}
                 >
                   Clear All
                 </Link>
